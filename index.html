@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chaca — College Portfolio &amp; Assignment Archive</title>
+  <meta name="description" content="A personal college portfolio that keeps every assignment, from the first task to the latest, organised in one place." />
+  <meta name="theme-color" content="#f8f1e7" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23a6795a'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='52' fill='%23fdf8f2' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="#top">
+        <span class="brand__mark" data-profile="initial">C</span>
+        <span class="brand__text"><span data-profile="name">Chaca</span><span class="brand__dot">.</span></span>
+      </a>
+
+      <nav class="nav" id="primaryNav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#assignments">Assignments</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn--small btn--primary" href="#contact">Get in touch</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow"><span class="eyebrow__dot"></span> College portfolio · Semester <span data-profile="semester">7</span></p>
+          <h1 class="hero__title">Every assignment,<br />from the <em>first</em> to the latest.</h1>
+          <p class="hero__lead">
+            I'm <strong data-profile="name">Chaca</strong>, a <span data-profile="major">Computer Science</span> student.
+            This site is my personal archive — all of my college tasks, neatly stored,
+            searchable, and easy to revisit whenever I need them.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#assignments">
+              Browse assignments
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+            <a class="btn btn--ghost" href="#contact">Get in touch</a>
+          </div>
+
+          <dl class="hero__stats">
+            <div>
+              <dt>Assignments archived</dt>
+              <dd id="statAssignments">0</dd>
+            </div>
+            <div>
+              <dt>Courses covered</dt>
+              <dd id="statCourses">0</dd>
+            </div>
+            <div>
+              <dt>Average grade</dt>
+              <dd id="statAverage">—</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero__visual">
+          <div class="profile-card">
+            <div class="profile-card__cover">
+              <span class="profile-card__initials" data-profile="initial" aria-hidden="true">C</span>
+              <img class="profile-card__photo" id="profilePhoto" alt="" decoding="async" hidden />
+              <span class="profile-card__badge">Open to internships</span>
+            </div>
+
+            <div class="profile-card__body">
+              <div class="avatar">
+                <span class="avatar__initials" data-profile="initial" aria-hidden="true">C</span>
+                <img class="avatar__img" id="profileAvatar" alt="" decoding="async" hidden />
+              </div>
+
+              <h2 class="profile-card__name" data-profile="name">Chaca</h2>
+              <p class="profile-card__role" data-profile="role">Informatics Student &amp; Web Enthusiast</p>
+
+              <dl class="profile-card__meta">
+                <div>
+                  <dt>University</dt>
+                  <dd data-profile="university">Your University</dd>
+                </div>
+                <div>
+                  <dt>Semester</dt>
+                  <dd data-profile="semesterLabel">Semester 7</dd>
+                </div>
+                <div>
+                  <dt>Based in</dt>
+                  <dd data-profile="location">Indonesia</dd>
+                </div>
+              </dl>
+
+              <div class="profile-card__tags" aria-label="Focus areas">
+                <span class="chip">Web Development</span>
+                <span class="chip">Data</span>
+                <span class="chip">UI/UX</span>
+              </div>
+            </div>
+          </div>
+          <p class="hero__note" id="latestNote">Latest update — loading archive…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about">
+          <div class="about__copy reveal">
+            <p class="eyebrow">About this archive</p>
+            <h2 class="section__title">A tidy shelf for every task.</h2>
+            <p>
+              Instead of scattering files across folders, chats, and cloud drives,
+              I keep all of my coursework here. Each entry records the course,
+              the deadline, the grade, and what I learned while working on it.
+            </p>
+            <p>
+              The archive grows every week, so the newest assignment always sits
+              at the top. Use the search box or filter by course and semester to
+              jump straight to what you need.
+            </p>
+          </div>
+
+          <div class="about__panel reveal">
+            <h3>How the archive works</h3>
+            <ol class="steps">
+              <li><span>01</span> Every task is numbered in the order it was given.</li>
+              <li><span>02</span> Files, grades, and notes are linked to each entry.</li>
+              <li><span>03</span> New assignments are added as the semester goes on.</li>
+            </ol>
+            <div class="about__facts">
+              <div>
+                <span data-stat="assignments">0</span>
+                <small>tasks stored</small>
+              </div>
+              <div>
+                <span data-stat="semesters">0</span>
+                <small>semesters</small>
+              </div>
+              <div>
+                <span data-stat="courses">0</span>
+                <small>courses</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ASSIGNMENTS ================= -->
+    <section class="section assignments" id="assignments">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">The archive</p>
+          <h2 class="section__title">Assignments, first to latest.</h2>
+          <p class="section__lead">
+            A complete record of my college tasks — from assignment 01 to the newest one.
+            Open any card to see the details, the grade, and the attached files.
+          </p>
+        </header>
+
+        <div class="toolbar reveal">
+          <div class="search">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></svg>
+            <label class="sr-only" for="assignmentSearch">Search assignments</label>
+            <input id="assignmentSearch" type="search" placeholder="Search by title, course, or tag…" autocomplete="off" />
+          </div>
+
+          <div class="toolbar__right">
+            <label class="sr-only" for="semesterFilter">Filter by semester</label>
+            <select id="semesterFilter" class="select">
+              <option value="all">All semesters</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="filters" id="courseFilters" role="group" aria-label="Filter by course"></div>
+
+        <p class="results" id="resultsCount" role="status" aria-live="polite"></p>
+
+        <noscript>
+          <p class="empty">
+            This archive is rendered with JavaScript. Please enable JavaScript to browse the assignments,
+            or contact me directly at <a href="mailto:chaca@example.com">chaca@example.com</a>.
+          </p>
+        </noscript>
+
+        <div class="grid" id="assignmentGrid"></div>
+
+        <div class="empty" id="emptyState" hidden>
+          <h3>No assignments match that search.</h3>
+          <p>Try a different keyword, course, or semester.</p>
+          <button class="btn btn--ghost" id="resetFilters" type="button">Reset filters</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="contact__grid">
+          <div class="contact__copy reveal">
+            <p class="eyebrow">Contact</p>
+            <h2 class="section__title">Let's talk about a task, a project, or an opportunity.</h2>
+            <p class="section__lead">
+              Questions about one of my assignments, a group project, or an internship?
+              You can reach me by email or phone — I usually reply within a day.
+            </p>
+
+            <ul class="contact-list">
+              <li class="contact-item">
+                <span class="contact-item__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3" /><path d="m4 7 8 6 8-6" /></svg>
+                </span>
+                <div class="contact-item__body">
+                  <span class="contact-item__label">Email</span>
+                  <a class="contact-item__value" id="contactEmail" href="mailto:chaca@example.com" data-profile="email">chaca@example.com</a>
+                </div>
+                <button class="copy-btn" type="button" data-copy="email" aria-label="Copy email address">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2" /><path d="M5 15V5a2 2 0 0 1 2-2h8" /></svg>
+                </button>
+              </li>
+
+              <li class="contact-item">
+                <span class="contact-item__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M6.5 3h3l1.5 4-2 1.5a12 12 0 0 0 6 6L16.5 12l4 1.5v3a2.5 2.5 0 0 1-2.7 2.5A16.5 16.5 0 0 1 4 5.7 2.5 2.5 0 0 1 6.5 3Z" /></svg>
+                </span>
+                <div class="contact-item__body">
+                  <span class="contact-item__label">Phone / WhatsApp</span>
+                  <a class="contact-item__value" id="contactPhone" href="tel:+6281234567890" data-profile="phone">+62 812-3456-7890</a>
+                </div>
+                <button class="copy-btn" type="button" data-copy="phone" aria-label="Copy phone number">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2" /><path d="M5 15V5a2 2 0 0 1 2-2h8" /></svg>
+                </button>
+              </li>
+
+              <li class="contact-item">
+                <span class="contact-item__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z" /><circle cx="12" cy="10" r="2.5" /></svg>
+                </span>
+                <div class="contact-item__body">
+                  <span class="contact-item__label">Location</span>
+                  <span class="contact-item__value" data-profile="location">Indonesia</span>
+                </div>
+              </li>
+            </ul>
+
+            <a class="btn btn--primary" id="waLink" href="https://wa.me/6281234567890" target="_blank" rel="noopener">
+              Chat on WhatsApp
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+          </div>
+
+          <form class="contact-form reveal" id="contactForm" novalidate>
+            <h3>Send a message</h3>
+            <p class="contact-form__hint">This form opens your email app with the message already written.</p>
+
+            <div class="field">
+              <label for="senderName">Your name</label>
+              <input id="senderName" name="name" type="text" placeholder="e.g. Rani" required />
+            </div>
+
+            <div class="field">
+              <label for="senderEmail">Your email</label>
+              <input id="senderEmail" name="email" type="email" placeholder="you@example.com" required />
+            </div>
+
+            <div class="field">
+              <label for="senderMessage">Message</label>
+              <textarea id="senderMessage" name="message" rows="4" placeholder="Hi Chaca, I'd like to ask about…" required></textarea>
+            </div>
+
+            <button class="btn btn--primary btn--block" type="submit">
+              Send message
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6" /></svg>
+            </button>
+            <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div>
+        <a class="brand brand--footer" href="#top">
+          <span class="brand__mark" data-profile="initial">C</span>
+          <span class="brand__text"><span data-profile="name">Chaca</span><span class="brand__dot">.</span></span>
+        </a>
+        <p class="footer__note">College portfolio &amp; assignment archive. Built with HTML, CSS, and a lot of coffee.</p>
+      </div>
+      <nav class="footer__links" aria-label="Footer navigation">
+        <a href="#about">About</a>
+        <a href="#assignments">Assignments</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="footer__copy">© <span id="year">2026</span> <span data-profile="name">Chaca</span>. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ================= ASSIGNMENT DETAIL MODAL ================= -->
+  <dialog class="modal" id="assignmentModal" aria-labelledby="modalTitle">
+    <div class="modal__panel">
+      <button class="modal__close" type="button" data-close-modal aria-label="Close details">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" /></svg>
+      </button>
+      <div class="modal__body" id="modalBody"></div>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/content.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
