@@ -35,12 +35,8 @@ otomatis memakai font bawaan sistem.
 
 ## 1. Ganti nama, foto, email, dan nomor HP
 
-Buka `assets/js/content.js`, ubah bagian `profile`.
-
-> **Penting:** tiga nilai kontak di bawah masih berupa contoh. Ganti dengan
-> alamat email dan nomor WhatsApp yang asli sebelum website dibagikan.
-> `email: "chaca@example.com"` dan `phone`/`phoneRaw`/`whatsapp` yang diawali
-> `+62 812-3456-7890`.
+Buka `assets/js/content.js`, ubah bagian `profile`. Email dan WhatsApp sudah
+diisi dengan data asli; kalau berubah, ganti di satu tempat ini saja.
 
 ```js
 profile: {
@@ -57,10 +53,10 @@ profile: {
   photo: "assets/img/Profile.jpg",    // "" = pakai huruf awal saja
   photoAlt: "Portrait of Syalsa Muenwa Jadeita",
 
-  email: "emailkamu@gmail.com",
-  phone: "+62 8xx-xxxx-xxxx",         // tampilan di halaman
-  phoneRaw: "+628xxxxxxxxxx",         // untuk link telepon
-  whatsapp: "628xxxxxxxxxx",          // angka saja, diawali 62
+  email: "syalsamuenwa089@gmail.com",
+  phone: "+62 812-7680-3135",         // tampilan di halaman
+  phoneRaw: "+6281276803135",         // untuk link telepon
+  whatsapp: "6281276803135",          // angka saja, diawali 62
 
   github: "https://github.com/syalsamuenwa",
   gitlab: "https://gitlab.com/syalsamuenwa",

@@ -24,11 +24,10 @@ window.PORTFOLIO = {
     photo: "assets/img/Profile.jpg",
     photoAlt: "Portrait of Syalsa Muenwa Jadeita",
 
-    // TODO: replace these three placeholder values with your real contact details.
-    email: "chaca@example.com",
-    phone: "+62 812-3456-7890",
-    phoneRaw: "+6281234567890",
-    whatsapp: "6281234567890",
+    email: "syalsamuenwa089@gmail.com",
+    phone: "+62 812-7680-3135",
+    phoneRaw: "+6281276803135",
+    whatsapp: "6281276803135",
 
     github: "https://github.com/syalsamuenwa",
     gitlab: "https://gitlab.com/syalsamuenwa",
