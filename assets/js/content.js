@@ -232,6 +232,36 @@ window.PORTFOLIO = {
      ------------------------------------------------------------------ */
   assignments: [
     {
+      number: 3,
+      course: "UTS Coursework",
+      title: "UTS — Job Application Letter & Presentation",
+      semester: 7,
+      added: "2026-11-13",
+      status: "Submitted",
+      summary:
+        "Midterm assignment: a one-page job application letter in English for a Web Developer position at TechNova Digital Solutions, presented in a 3:49 video. The letter also refers recruiters to this portfolio.",
+      highlights: [
+        "Wrote a formal job application letter in English for a Web Developer position",
+        "Recorded a 3:49 presentation video explaining the letter",
+        "Stored both the PDF letter and the video in tugas/UTS/",
+      ],
+      tags: ["UTS", "Job Application", "Presentation"],
+      files: [
+        {
+          label: "Presentasi UTS.mp4 (35.1 MB)",
+          href: "tugas/UTS/Presentasi UTS_2300018324.mp4",
+          type: "video",
+          note: "Full 3:49 midterm presentation, 480×848 portrait.",
+        },
+        {
+          label: "Surat Lamaran Pekerjaan (PDF)",
+          href: "tugas/UTS/Surat Lamaran Pekerjaan_2300018324.pdf",
+          type: "pdf",
+          note: "One-page application letter, 0.2 MB.",
+        },
+      ],
+    },
+    {
       number: 2,
       course: "Video Coursework",
       title: "Tugas 2 — Video Assignment",

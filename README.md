@@ -23,9 +23,12 @@ Portofolio/
 │     └─ main.js                 ← logika pencarian, filter, popup, tombol copy
 ├─ tugas/
 │  ├─ Tugas 1/tugas 1.mp4        ← video tugas 1
-│  └─ Tugas 2/
-│     ├─ IMG_4320.MOV            ← rekaman asli 207 MB (tidak ikut Git)
-│     └─ tugas 2.mp4             ← versi web 6,4 MB (yang dipakai website)
+│  ├─ Tugas 2/
+│  │  ├─ IMG_4320.MOV            ← rekaman asli 207 MB (tidak ikut Git)
+│  │  └─ tugas 2.mp4             ← versi web 6,4 MB (yang dipakai website)
+│  └─ UTS/
+│     ├─ Presentasi UTS_2300018324.mp4          ← video presentasi UTS (35,1 MB)
+│     └─ Surat Lamaran Pekerjaan_2300018324.pdf ← surat lamaran UTS (0,2 MB)
 └─ README.md
 ```
 
@@ -146,6 +149,14 @@ Rekaman asli `tugas/Tugas 2/IMG_4320.MOV` berukuran 207 MB, melebihi batas
 dipakai website adalah `tugas/Tugas 2/tugas 2.mp4` — hasil kompresi 1280×720,
 30 fps, durasi tetap 2:14, ukuran 6,4 MB. Kalau ingin mengganti video, kompres
 dulu ke bawah 100 MB dan simpan dengan nama yang sama.
+
+### Berkas UTS
+
+Tugas UTS ada di `tugas/UTS/` dan terdiri dari dua file: video presentasi
+(`Presentasi UTS_2300018324.mp4`, 3:49, 35,1 MB) dan surat lamaran pekerjaan
+(`Surat Lamaran Pekerjaan_2300018324.pdf`, 1 halaman). Keduanya tampil sebagai
+satu kartu "UTS — Job Application Letter & Presentation": video bisa diputar
+langsung di popup, PDF terbuka di tab baru.
 
 ## 4. Menambah sertifikat
 
