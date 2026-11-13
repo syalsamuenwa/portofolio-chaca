@@ -3,11 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chaca — College Portfolio &amp; Assignment Archive</title>
-  <meta name="description" content="A personal college portfolio that keeps every assignment, from the first task to the latest, organised in one place." />
-  <meta name="theme-color" content="#f8f1e7" />
+  <title>Syalsa Muenwa Jadeita — Informatics Portfolio</title>
+  <meta name="description" content="Portfolio of Syalsa Muenwa Jadeita, an Informatics student at Universitas Ahmad Dahlan. Web and mobile projects, certificates, and coursework." />
+  <meta name="theme-color" content="#fdf8f9" />
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23a6795a'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='52' fill='%23fdf8f2' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://syalsamuenwa.github.io/portofolio-chaca/" />
+  <meta property="og:title" content="Syalsa Muenwa Jadeita — Informatics Portfolio" />
+  <meta property="og:description" content="Web and mobile projects, certificates, and coursework from an Informatics student at Universitas Ahmad Dahlan." />
+  <meta property="og:image" content="https://syalsamuenwa.github.io/portofolio-chaca/assets/img/Profile.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23c4657f'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='50' fill='%23fffafb' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,13 +28,16 @@
   <header class="site-header" id="top">
     <div class="container header__inner">
       <a class="brand" href="#top">
-        <span class="brand__mark" data-profile="initial">C</span>
-        <span class="brand__text"><span data-profile="name">Chaca</span><span class="brand__dot">.</span></span>
+        <span class="brand__mark" data-profile="initial">S</span>
+        <span class="brand__text"><span data-profile="shortName">Syalsa Jadeita</span><span class="brand__dot">.</span></span>
       </a>
 
       <nav class="nav" id="primaryNav" aria-label="Main navigation">
         <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
         <a href="#assignments">Assignments</a>
+        <a href="#certificates">Certificates</a>
         <a href="#contact">Contact</a>
         <a class="btn btn--small btn--primary" href="#contact">Get in touch</a>
       </nav>
@@ -43,34 +53,48 @@
     <section class="hero">
       <div class="container hero__inner">
         <div class="hero__copy">
-          <p class="eyebrow"><span class="eyebrow__dot"></span> College portfolio · Semester <span data-profile="semester">7</span></p>
-          <h1 class="hero__title">Every assignment,<br />from the <em>first</em> to the latest.</h1>
+          <p class="eyebrow"><span class="eyebrow__dot"></span> Informatics portfolio · <span data-profile="university">Universitas Ahmad Dahlan</span></p>
+          <h1 class="hero__title">Turning coursework into <em>real projects</em>.</h1>
           <p class="hero__lead">
-            I'm <strong data-profile="name">Chaca</strong>, a <span data-profile="major">Computer Science</span> student.
-            This site is my personal archive — all of my college tasks, neatly stored,
-            searchable, and easy to revisit whenever I need them.
+            I'm <strong data-profile="name">Syalsa Muenwa Jadeita</strong>, an
+            <span data-profile="major">Informatics</span> student at
+            <span data-profile="university">Universitas Ahmad Dahlan</span>. I build web and mobile
+            applications, and this portfolio collects the work behind them — internship projects,
+            certificates, and coursework.
           </p>
 
           <div class="hero__actions">
-            <a class="btn btn--primary" href="#assignments">
-              Browse assignments
+            <a class="btn btn--primary" href="#projects">
+              Explore projects
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
             </a>
-            <a class="btn btn--ghost" href="#contact">Get in touch</a>
+            <a class="btn btn--ghost" href="#certificates">View certificates</a>
+          </div>
+
+          <div class="hero__links" aria-label="Profiles">
+            <a class="hero__link" data-link="github" href="https://github.com/syalsamuenwa" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.8a3.4 3.4 0 0 0-1-2.6c3.3-.4 6.8-1.6 6.8-7.3A5.7 5.7 0 0 0 20.3 4a5.3 5.3 0 0 0-.1-3.9s-1.2-.4-4 1.5a13.6 13.6 0 0 0-7.3 0C6 -.3 4.8.1 4.8.1a5.3 5.3 0 0 0-.1 3.9A5.7 5.7 0 0 0 3.2 8.3c0 5.7 3.5 6.9 6.8 7.3a3.4 3.4 0 0 0-1 2.6V22" /></svg>
+              GitHub
+            </a>
+            <span class="hero__link-sep" aria-hidden="true"></span>
+            <a class="hero__link" data-link="gitlab" href="https://gitlab.com/syalsamuenwa" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 21 9-6.5L18.6 3l-3.3 6H8.7L5.4 3 3 14.5 12 21Z" /></svg>
+              GitLab
+            </a>
           </div>
 
           <dl class="hero__stats">
             <div>
-              <dt>Assignments archived</dt>
+              <dt>Project groups</dt>
+              <dd id="statProjects">0</dd>
+            </div>
+            <div>
+              <dt>Certificates</dt>
+              <dd id="statCertificates">0</dd>
+            </div>
+            <div>
+              <dt>Assignments</dt>
               <dd id="statAssignments">0</dd>
-            </div>
-            <div>
-              <dt>Courses covered</dt>
-              <dd id="statCourses">0</dd>
-            </div>
-            <div>
-              <dt>Average grade</dt>
-              <dd id="statAverage">—</dd>
             </div>
           </dl>
         </div>
@@ -78,24 +102,24 @@
         <div class="hero__visual">
           <div class="profile-card">
             <div class="profile-card__cover">
-              <span class="profile-card__initials" data-profile="initial" aria-hidden="true">C</span>
+              <span class="profile-card__initials" data-profile="initial" aria-hidden="true">S</span>
               <img class="profile-card__photo" id="profilePhoto" alt="" decoding="async" hidden />
               <span class="profile-card__badge">Open to internships</span>
             </div>
 
             <div class="profile-card__body">
               <div class="avatar">
-                <span class="avatar__initials" data-profile="initial" aria-hidden="true">C</span>
+                <span class="avatar__initials" data-profile="initial" aria-hidden="true">S</span>
                 <img class="avatar__img" id="profileAvatar" alt="" decoding="async" hidden />
               </div>
 
-              <h2 class="profile-card__name" data-profile="name">Chaca</h2>
-              <p class="profile-card__role" data-profile="role">Informatics Student &amp; Web Enthusiast</p>
+              <h2 class="profile-card__name" data-profile="name">Syalsa Muenwa Jadeita</h2>
+              <p class="profile-card__role" data-profile="role">Informatics Student · Web &amp; Mobile Developer</p>
 
               <dl class="profile-card__meta">
                 <div>
                   <dt>University</dt>
-                  <dd data-profile="university">Your University</dd>
+                  <dd data-profile="university">Universitas Ahmad Dahlan</dd>
                 </div>
                 <div>
                   <dt>Semester</dt>
@@ -103,18 +127,18 @@
                 </div>
                 <div>
                   <dt>Based in</dt>
-                  <dd data-profile="location">Indonesia</dd>
+                  <dd data-profile="location">Yogyakarta, Indonesia</dd>
                 </div>
               </dl>
 
               <div class="profile-card__tags" aria-label="Focus areas">
                 <span class="chip">Web Development</span>
+                <span class="chip">Mobile</span>
                 <span class="chip">Data</span>
-                <span class="chip">UI/UX</span>
               </div>
             </div>
           </div>
-          <p class="hero__note" id="latestNote">Latest update — loading archive…</p>
+          <p class="hero__note" id="latestNote">Portfolio updated — loading…</p>
         </div>
       </div>
     </section>
@@ -124,43 +148,93 @@
       <div class="container">
         <div class="about">
           <div class="about__copy reveal">
-            <p class="eyebrow">About this archive</p>
-            <h2 class="section__title">A tidy shelf for every task.</h2>
+            <p class="eyebrow">About me</p>
+            <h2 class="section__title">A builder with a record to show.</h2>
             <p>
-              Instead of scattering files across folders, chats, and cloud drives,
-              I keep all of my coursework here. Each entry records the course,
-              the deadline, the grade, and what I learned while working on it.
+              I study Informatics at Universitas Ahmad Dahlan in Yogyakarta. Over the last few
+              semesters I have built web and Android applications — from a Laravel-based monitoring
+              system for my internship to small Kotlin apps for mobile programming practicum.
             </p>
             <p>
-              The archive grows every week, so the newest assignment always sits
-              at the top. Use the search box or filter by course and semester to
-              jump straight to what you need.
+              I care about clean interfaces, clear data flows, and work that is actually usable.
+              This site is both a portfolio and an archive: selected projects, every certificate
+              I have earned, and the assignments I have submitted. Each item links back to its
+              repository or original file.
+            </p>
+            <p class="about__quote">
+              Currently looking for an internship or junior role where I can keep building
+              useful web and mobile products.
             </p>
           </div>
 
           <div class="about__panel reveal">
-            <h3>How the archive works</h3>
+            <h3>How this portfolio is organised</h3>
             <ol class="steps">
-              <li><span>01</span> Every task is numbered in the order it was given.</li>
-              <li><span>02</span> Files, grades, and notes are linked to each entry.</li>
-              <li><span>03</span> New assignments are added as the semester goes on.</li>
+              <li><span>01</span> Projects — case studies with the stack and my role.</li>
+              <li><span>02</span> Certificates — every certificate, linked to the original file.</li>
+              <li><span>03</span> Assignments — the video tasks stored in the tugas folder.</li>
             </ol>
             <div class="about__facts">
               <div>
+                <span data-stat="projects">0</span>
+                <small>project groups</small>
+              </div>
+              <div>
+                <span data-stat="certificates">0</span>
+                <small>certificates</small>
+              </div>
+              <div>
                 <span data-stat="assignments">0</span>
-                <small>tasks stored</small>
-              </div>
-              <div>
-                <span data-stat="semesters">0</span>
-                <small>semesters</small>
-              </div>
-              <div>
-                <span data-stat="courses">0</span>
-                <small>courses</small>
+                <small>assignments</small>
               </div>
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Skills</p>
+          <h2 class="section__title">Skills, with proof.</h2>
+          <p class="section__lead">
+            I would rather show the work than list a percentage. Each group below is backed by a
+            project, repository, or certificate in this portfolio.
+          </p>
+        </header>
+
+        <div class="skills-grid" id="skillsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Selected work</p>
+          <h2 class="section__title">Projects, with the receipts.</h2>
+          <p class="section__lead">
+            Internship work, course projects, and personal builds. Open any card for the role,
+            the stack, and what I actually worked on.
+          </p>
+        </header>
+
+        <div id="featuredProject"></div>
+
+        <div class="project-grid" id="projectGrid"></div>
+
+        <p class="projects__note">
+          All public project links in this portfolio point to
+          <a data-link="github" href="https://github.com/syalsamuenwa" target="_blank" rel="noopener">GitHub</a>.
+          Some coursework is also kept on
+          <a data-link="gitlab" href="https://gitlab.com/syalsamuenwa" target="_blank" rel="noopener">GitLab</a>.
+        </p>
+
+        <noscript>
+          <p class="empty">Project cards are rendered with JavaScript. Please enable JavaScript to browse them.</p>
+        </noscript>
       </div>
     </section>
 
@@ -171,8 +245,8 @@
           <p class="eyebrow">The archive</p>
           <h2 class="section__title">Assignments, first to latest.</h2>
           <p class="section__lead">
-            A complete record of my college tasks — from assignment 01 to the newest one.
-            Open any card to see the details, the grade, and the attached files.
+            A record of the video tasks I have submitted, stored in the tugas folder. Open a card
+            to watch the video and see the details.
           </p>
         </header>
 
@@ -212,16 +286,40 @@
       </div>
     </section>
 
+    <!-- ================= CERTIFICATES ================= -->
+    <section class="section certificates" id="certificates">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Proof of work</p>
+          <h2 class="section__title">Certificates &amp; involvement.</h2>
+          <p class="section__lead">
+            Academic, organizational, and community certificates. Duplicate files in the folder are
+            merged into one entry; open a card to preview it and download the original.
+          </p>
+        </header>
+
+        <div class="filters" id="certificateFilters" role="group" aria-label="Filter certificates by category"></div>
+
+        <p class="results" id="certificateCount" role="status" aria-live="polite"></p>
+
+        <div class="cert-grid" id="certificateGrid"></div>
+
+        <noscript>
+          <p class="empty">The certificate gallery is rendered with JavaScript. Please enable JavaScript to browse it.</p>
+        </noscript>
+      </div>
+    </section>
+
     <!-- ================= CONTACT ================= -->
     <section class="section contact" id="contact">
       <div class="container">
         <div class="contact__grid">
           <div class="contact__copy reveal">
             <p class="eyebrow">Contact</p>
-            <h2 class="section__title">Let's talk about a task, a project, or an opportunity.</h2>
+            <h2 class="section__title">Let's talk about a project, a role, or a collaboration.</h2>
             <p class="section__lead">
-              Questions about one of my assignments, a group project, or an internship?
-              You can reach me by email or phone — I usually reply within a day.
+              I am open to internships, junior web/mobile roles, and campus collaborations.
+              Reach me by email, phone, or GitHub — I usually reply within a day.
             </p>
 
             <ul class="contact-list">
@@ -257,7 +355,17 @@
                 </span>
                 <div class="contact-item__body">
                   <span class="contact-item__label">Location</span>
-                  <span class="contact-item__value" data-profile="location">Indonesia</span>
+                  <span class="contact-item__value" data-profile="location">Yogyakarta, Indonesia</span>
+                </div>
+              </li>
+
+              <li class="contact-item">
+                <span class="contact-item__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.8a3.4 3.4 0 0 0-1-2.6c3.3-.4 6.8-1.6 6.8-7.3A5.7 5.7 0 0 0 20.3 4a5.3 5.3 0 0 0-.1-3.9s-1.2-.4-4 1.5a13.6 13.6 0 0 0-7.3 0C6 -.3 4.8.1 4.8.1a5.3 5.3 0 0 0-.1 3.9A5.7 5.7 0 0 0 3.2 8.3c0 5.7 3.5 6.9 6.8 7.3a3.4 3.4 0 0 0-1 2.6V22" /></svg>
+                </span>
+                <div class="contact-item__body">
+                  <span class="contact-item__label">GitHub</span>
+                  <a class="contact-item__value" data-link="github" href="https://github.com/syalsamuenwa" target="_blank" rel="noopener" data-profile="githubLabel">github.com/syalsamuenwa</a>
                 </div>
               </li>
             </ul>
@@ -302,22 +410,25 @@
     <div class="container footer__inner">
       <div>
         <a class="brand brand--footer" href="#top">
-          <span class="brand__mark" data-profile="initial">C</span>
-          <span class="brand__text"><span data-profile="name">Chaca</span><span class="brand__dot">.</span></span>
+          <span class="brand__mark" data-profile="initial">S</span>
+          <span class="brand__text"><span data-profile="shortName">Syalsa Jadeita</span><span class="brand__dot">.</span></span>
         </a>
-        <p class="footer__note">College portfolio &amp; assignment archive. Built with HTML, CSS, and a lot of coffee.</p>
+        <p class="footer__note">Informatics portfolio &amp; coursework archive. Built with HTML, CSS, and JavaScript; published with GitHub Pages.</p>
       </div>
       <nav class="footer__links" aria-label="Footer navigation">
         <a href="#about">About</a>
+        <a href="#projects">Projects</a>
         <a href="#assignments">Assignments</a>
-        <a href="#contact">Contact</a>
+        <a href="#certificates">Certificates</a>
+        <a data-link="github" href="https://github.com/syalsamuenwa" target="_blank" rel="noopener">GitHub</a>
+        <a data-link="gitlab" href="https://gitlab.com/syalsamuenwa" target="_blank" rel="noopener">GitLab</a>
       </nav>
-      <p class="footer__copy">© <span id="year">2026</span> <span data-profile="name">Chaca</span>. All rights reserved.</p>
+      <p class="footer__copy">© <span id="year">2026</span> <span data-profile="name">Syalsa Muenwa Jadeita</span>. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- ================= ASSIGNMENT DETAIL MODAL ================= -->
-  <dialog class="modal" id="assignmentModal" aria-labelledby="modalTitle">
+  <!-- ================= DETAIL MODAL ================= -->
+  <dialog class="modal" id="detailModal" aria-labelledby="modalTitle">
     <div class="modal__panel">
       <button class="modal__close" type="button" data-close-modal aria-label="Close details">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" /></svg>

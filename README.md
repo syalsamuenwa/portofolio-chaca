@@ -1,162 +1,218 @@
-# College Portfolio & Assignment Archive
+# Portofolio Syalsa Muenwa Jadeita
 
-Website portofolio satu halaman untuk menyimpan semua tugas kuliah — dari tugas
-pertama sampai tugas terbaru. Tema warna coklat pastel, bahasa Inggris.
+Website portofolio satu halaman: proyek, sertifikat, dan arsip tugas kuliah.
+Bahasa halaman: Inggris. Dibuat dengan HTML, CSS, dan JavaScript murni — tanpa
+framework dan tanpa proses build. Tema putih–pink profesional.
 
 ## Struktur folder
 
 ```
 Portofolio/
-├─ index.html              ← halaman utama
+├─ index.html                    ← halaman utama
 ├─ assets/
-│  ├─ css/style.css        ← warna, font, layout
+│  ├─ css/style.css              ← warna, font, layout
 │  ├─ img/
-│  │  └─ profile.jpg       ← foto profil (cover + avatar)
+│  │  ├─ Profile.jpg             ← foto profil (cover + avatar)
+│  │  └─ Sertifikat/             ← file sertifikat asli
+│  │     └─ thumbs/              ← thumbnail ringan untuk galeri
+│  ├─ SIMONEV-SIKEP/             ← checkout proyek magang (tidak dipublikasikan)
 │  └─ js/
-│     ├─ content.js        ← SEMUA data: nama, email, no HP, daftar tugas
-│     └─ main.js           ← logika pencarian, filter, popup, tombol copy
-├─ tugas/                  ← file tugas asli (video, PDF, DOCX, dll)
-│  └─ Tugas 1/
-│     └─ tugas 1.mp4
+│     ├─ content.js              ← SEMUA data: profil, skill, proyek, tugas, sertifikat
+│     └─ main.js                 ← logika pencarian, filter, popup, tombol copy
+├─ tugas/
+│  ├─ Tugas 1/tugas 1.mp4        ← video tugas 1
+│  └─ Tugas 2/
+│     ├─ IMG_4320.MOV            ← rekaman asli 207 MB (tidak ikut Git)
+│     └─ tugas 2.mp4             ← versi web 6,4 MB (yang dipakai website)
 └─ README.md
 ```
 
 ## Cara membuka
 
-Klik dua kali `index.html`. Website langsung jalan tanpa perlu install apa pun
-(butuh koneksi internet hanya untuk font Google; kalau offline, font otomatis
-memakai font bawaan sistem).
+Klik dua kali `index.html`. Website langsung jalan tanpa install apa pun.
+Koneksi internet hanya dibutuhkan untuk font Google; kalau offline, font
+otomatis memakai font bawaan sistem.
 
 ## 1. Ganti nama, foto, email, dan nomor HP
 
-Buka `assets/js/content.js`, ubah bagian `profile`:
+Buka `assets/js/content.js`, ubah bagian `profile`.
+
+> **Penting:** tiga nilai kontak di bawah masih berupa contoh. Ganti dengan
+> alamat email dan nomor WhatsApp yang asli sebelum website dibagikan.
+> `email: "chaca@example.com"` dan `phone`/`phoneRaw`/`whatsapp` yang diawali
+> `+62 812-3456-7890`.
 
 ```js
 profile: {
-  name: "Chaca",
-  initial: "C",                 // huruf cadangan kalau foto tidak ada
-  role: "Informatics Student & Web Enthusiast",
-  major: "Computer Science",
-  university: "Nama Universitas",
+  name: "Syalsa Muenwa Jadeita",
+  shortName: "Syalsa Jadeita",
+  initial: "S",                       // huruf cadangan kalau foto gagal dimuat
+  role: "Informatics Student · Web & Mobile Developer",
+  major: "Informatics",
+  university: "Universitas Ahmad Dahlan",
   semester: 7,
   semesterLabel: "Semester 7",
-  location: "Indonesia",
+  location: "Yogyakarta, Indonesia",
 
-  photo: "assets/img/profile.jpg",   // "" = pakai huruf awal saja
-  photoAlt: "Portrait of Chaca",     // teks alternatif untuk pembaca layar
+  photo: "assets/img/Profile.jpg",    // "" = pakai huruf awal saja
+  photoAlt: "Portrait of Syalsa Muenwa Jadeita",
 
   email: "emailkamu@gmail.com",
-  phone: "+62 812-3456-7890",   // tampilan di halaman
-  phoneRaw: "+6281234567890",   // untuk link telepon
-  whatsapp: "6281234567890",    // angka saja, diawali 62
+  phone: "+62 8xx-xxxx-xxxx",         // tampilan di halaman
+  phoneRaw: "+628xxxxxxxxxx",         // untuk link telepon
+  whatsapp: "628xxxxxxxxxx",          // angka saja, diawali 62
+
+  github: "https://github.com/syalsamuenwa",
+  gitlab: "https://gitlab.com/syalsamuenwa",
 }
 ```
 
-Foto dipakai dua kali: sebagai cover lebar di kartu profil dan sebagai avatar
-bulat yang menumpuk di bawahnya. Kalau file foto dihapus atau path-nya salah,
-website otomatis kembali menampilkan huruf awal nama.
+Foto dipakai dua kali: sebagai cover di kartu profil dan sebagai avatar bulat.
+Kalau file foto dihapus atau path-nya salah, website otomatis menampilkan
+huruf awal nama.
 
-## 2. Menambah tugas baru
+Nama file foto **case-sensitive** di GitHub Pages (server Linux). Simpan sebagai
+`Profile.jpg` dengan P kapital, sama seperti di `content.js`.
 
-Di file yang sama, di dalam `assignments: [ ... ]`, copy satu blok lalu ubah isinya.
-Taruh blok baru di paling atas supaya jadi tugas terbaru:
+## 2. Menambah atau mengubah proyek
+
+Di `content.js`, bagian `projects: [ ... ]`. Proyek dengan `featured: true`
+tampil besar di atas grid; sisanya jadi kartu. Field yang dipakai:
 
 ```js
 {
-  number: 10,                                  // urutan tugas
-  course: "Web Programming",                   // nama mata kuliah
-  title: "Judul tugas",
-  semester: 7,
-  due: "2026-11-05",                           // format YYYY-MM-DD
-  status: "In progress",                       // "Graded" | "Submitted" | "In progress"
-  grade: null,                                 // angka 0-100, atau null kalau belum dinilai
-  summary: "Deskripsi singkat tugasnya.",
-  highlights: [
-    "Hal pertama yang dikerjakan",
-    "Hal kedua yang dikerjakan",
+  id: "nama-unik",                 // dipakai tombol "Project details"
+  index: "05",
+  featured: false,
+  kicker: "Course project",        // label kecil di atas judul
+  title: "Nama proyek",
+  subtitle: "Satu baris penjelasan",
+  role: "Web developer",
+  org: "Mata kuliah / organisasi",
+  year: "2026",
+  summary: "Ringkasan singkat untuk kartu.",
+  description: "Penjelasan lengkap di popup.",
+  highlights: ["Yang dikerjakan", "Hasilnya"],
+  modules: ["Modul A", "Modul B"], // opsional
+  stack: ["Laravel", "MySQL"],
+  repo: "https://github.com/...",  // opsional
+  demo: "https://...",             // opsional
+  repos: [                         // opsional, untuk proyek dengan banyak repo
+    { label: "Repo 1", url: "https://...", note: "Keterangan" },
   ],
-  tags: ["HTML", "CSS"],
-  files: [],                                   // lihat langkah 3
-},
+  note: "Catatan tambahan.",       // opsional
+}
 ```
 
-Jumlah tugas, jumlah mata kuliah, rata-rata nilai, dan tulisan "Latest update"
-di halaman dihitung otomatis. Filter mata kuliah dan semester juga otomatis muncul.
+## 3. Menambah tugas baru
 
-## 3. Melampirkan file tugas (folder `tugas/`)
-
-File tugas disimpan di folder `tugas/`, mengikuti struktur yang sudah ada:
-
-```
-tugas/
-└─ Tugas 1/
-   └─ tugas 1.mp4
-```
-
-Lalu hubungkan ke data tugas. Spasi pada path ditulis `%20`:
+Bagian `assignments: [ ... ]` di `content.js`. Copy satu blok, taruh di paling
+atas supaya jadi tugas terbaru, lalu ubah isinya.
 
 ```js
-files: [
-  {
-    label: "Tugas 1.mp4",
-    href: "tugas/Tugas%201/tugas%201.mp4",
-    type: "video",              // video = otomatis muncul player di popup
-  },
-],
+{
+  number: 3,
+  course: "Video Coursework",
+  title: "Tugas 3 — Judul",
+  semester: 7,
+  added: "2026-11-20",             // format YYYY-MM-DD
+  status: "Submitted",             // "Graded" | "Submitted" | "In progress"
+  summary: "Deskripsi singkat.",
+  highlights: ["Hal pertama", "Hal kedua"],
+  tags: ["Video", "Coursework"],
+  files: [
+    {
+      label: "Tugas 3.mp4",
+      href: "tugas/Tugas 3/tugas 3.mp4",   // spasi boleh ditulis biasa
+      type: "video",                        // video = pemutar di popup
+      note: "Opsional",
+    },
+  ],
+}
 ```
 
-Contoh untuk PDF/DOCX:
+Jumlah tugas, mata kuliah, dan tulisan "Latest assignment" dihitung otomatis.
+File bertipe `video` (atau berakhiran `.mp4`, `.webm`, `.mov`, `.m4v`) tampil
+dengan pemutar di popup; file lain tampil sebagai tombol buka/unduh.
+
+### Video Tugas 2
+
+Rekaman asli `tugas/Tugas 2/IMG_4320.MOV` berukuran 207 MB, melebihi batas
+100 MB GitHub, jadi file itu **tidak** di-commit (lihat `.gitignore`). Yang
+dipakai website adalah `tugas/Tugas 2/tugas 2.mp4` — hasil kompresi 1280×720,
+30 fps, durasi tetap 2:14, ukuran 6,4 MB. Kalau ingin mengganti video, kompres
+dulu ke bawah 100 MB dan simpan dengan nama yang sama.
+
+## 4. Menambah sertifikat
+
+1. Simpan file asli di `assets/img/Sertifikat/`.
+2. Buat thumbnail (lebar maksimal 1200 px, JPG) di
+   `assets/img/Sertifikat/thumbs/`.
+3. Tambahkan entri di `certificates: [ ... ]`:
 
 ```js
-files: [
-  { label: "Laporan.pdf", href: "tugas/Tugas%202/laporan.pdf" },
-  { label: "Slide.pptx", href: "tugas/Tugas%202/slide.pptx" },
-],
+{
+  id: "nama-unik",
+  title: "Judul sertifikat",
+  organizer: "Penyelenggara",
+  year: "2026",
+  category: "Organization",   // Organization | Training | Competition
+                              // Community | Campus | Event
+  role: "Participant",
+  description: "Penjelasan singkat.",
+  preview: "assets/img/Sertifikat/thumbs/nama-file.jpg",
+  files: [
+    { label: "Certificate (PDF)", href: "assets/img/Sertifikat/nama-file.pdf", type: "pdf" },
+  ],
+}
 ```
 
-- File bertipe `video` (atau berakhiran `.mp4`, `.webm`, `.mov`, `.m4v`) akan
-  tampil dengan pemutar video di dalam popup detail.
-- File lain tampil sebagai tombol unduh/buka.
-- Kalau `files` dibiarkan `[]`, popup menampilkan "Attachment coming soon."
-- Jumlah file otomatis muncul di kartu tugas ("· 1 file").
+File duplikat di folder sudah digabung jadi satu entri (misalnya
+`16. Syalsa Muenwa Jadeita` = `Syalsa_NMCC.png`, dan
+`p2k_uad_2300018324.png` = `sertifikat_p2k.png`). Filter kategori muncul
+otomatis dari data.
 
-Entri **No. 09 "Tugas 1 — Video Presentation"** sudah memakai video dari folder
-`tugas/Tugas 1/`. Ganti `course`, `title`, `due`, dan `summary` sesuai mata
-kuliah aslinya.
+## 5. Mengubah warna
 
-## 4. Mengubah warna
-
-Semua warna ada di bagian paling atas `assets/css/style.css`:
+Semua warna ada di bagian atas `assets/css/style.css`:
 
 ```css
 :root {
-  --cream: #f8f1e7;         /* latar halaman */
-  --surface: #fffdf9;       /* latar kartu */
-  --sand: #efe0cf;          /* aksen lembut */
-  --accent: #a6795a;        /* coklat utama (tombol) */
-  --accent-strong: #8a5f42; /* coklat tua (judul kecil) */
-  --ink: #3f2d22;           /* warna teks */
-  --muted: #7f6656;         /* teks sekunder */
+  --cream: #fdf8f9;         /* latar halaman */
+  --surface: #ffffff;       /* latar kartu */
+  --sand: #fbeaef;          /* pink sangat lembut */
+  --accent: #c4657f;        /* rose (tombol, aksen) */
+  --accent-strong: #a74964; /* rose tua (judul kecil, link) */
+  --ink: #33222a;           /* warna teks */
+  --muted: #7d6671;         /* teks sekunder */
+  --plum: #2c1a22;          /* footer */
 }
 ```
 
 ## Fitur
 
-- Foto profil sebagai cover + avatar (dengan fallback huruf awal)
-- Pencarian judul, mata kuliah, dan tag
-- Filter per mata kuliah + per semester
-- Popup detail tugas (status, deadline, nilai, ringkasan, pemutar video, file)
-- Tombol copy email & nomor HP
-- Form kontak yang membuka aplikasi email dengan pesan siap kirim
-- Link WhatsApp langsung
-- Responsif (HP, tablet, desktop), bisa di-print, dan mendukung reduced motion
+- Foto profil sebagai cover + avatar (fallback huruf awal)
+- Hero dengan statistik otomatis: proyek, sertifikat, tugas
+- Skill yang disertai bukti (proyek/repo/sertifikat)
+- Kartu proyek + popup studi kasus (role, stack, modul, link repo)
+- Galeri sertifikat dengan filter kategori dan preview
+- Pencarian judul, mata kuliah, dan tag tugas
+- Filter tugas per mata kuliah dan semester
+- Popup detail tugas dengan pemutar video dan daftar file
+- Tombol copy email & nomor HP, link WhatsApp, form kontak via email
+- Responsif (HP, tablet, desktop), bisa di-print, mendukung reduced motion
 
-## Publikasi (opsional)
+## Catatan proyek SIMONEV-SIKEP
 
-Supaya bisa diakses online:
+`assets/SIMONEV-SIKEP/` adalah checkout proyek magang (Laravel 11). Folder ini
+**tidak ikut di-commit** karena berisi `.env`, folder `vendor`, dan log — dan
+karena sistemnya internal. Di website, SIMONEV tampil sebagai kartu proyek yang
+menunjuk ke repositori GitHub publiknya.
 
-- **GitHub Pages** — upload folder ini ke repository, lalu aktifkan Pages di Settings.
-- **Netlify / Vercel** — drag & drop folder ini ke dashboard mereka. Tidak perlu build.
+## Publikasi
 
-Catatan: video 4 MB ikut ter-upload. Kalau terlalu besar untuk hosting gratis,
-kompres videonya atau unggah ke YouTube/Drive lalu ganti `href` dengan link tersebut.
+Website ini sudah dipublikasikan lewat **GitHub Pages**:
+<https://syalsamuenwa.github.io/portofolio-chaca/>
+
+Setiap kali `main` di-push, GitHub Pages memperbarui situs dalam beberapa menit.
+Alternatif lain: drag & drop folder ini ke Netlify atau Vercel (tanpa build).

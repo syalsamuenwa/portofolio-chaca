@@ -6,3 +6,14 @@ desktop.ini
 # Temporary preview/test files
 __test.html
 *.tmp
+
+# Large source recordings — the web copy lives beside them as "tugas 2.mp4"
+tugas/Tugas 2/IMG_4320.MOV
+
+# Internship project checkout (nested repository with .env secrets and vendor/)
+# It is referenced as a project card, not republished here.
+assets/SIMONEV-SIKEP/
+
+# Dependencies / build output
+node_modules/
+vendor/
