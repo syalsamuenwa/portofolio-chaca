@@ -21,8 +21,11 @@ window.PORTFOLIO = {
     location: "Yogyakarta, Indonesia",
 
     // Profile photo (leave "" to fall back to the initial letter)
-    photo: "assets/img/Profile.jpg",
+    // Transparent cut-out so the portrait sits on the blush card background.
+    photo: "assets/img/Profile-cutout.png",
     photoAlt: "Portrait of Syalsa Muenwa Jadeita",
+    // Square head-and-shoulders crop used for the round avatar.
+    avatarPhoto: "assets/img/Profile-avatar.png",
 
     email: "syalsamuenwa089@gmail.com",
     phone: "+62 812-7680-3135",

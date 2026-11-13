@@ -12,7 +12,9 @@ Portofolio/
 ├─ assets/
 │  ├─ css/style.css              ← warna, font, layout
 │  ├─ img/
-│  │  ├─ Profile.jpg             ← foto profil (cover + avatar)
+│  │  ├─ Profile.jpg             ← foto asli (dipakai untuk preview sosial/OG)
+│  │  ├─ Profile-cutout.png      ← foto dengan latar transparan (cover kartu)
+│  │  ├─ Profile-avatar.png      ← potongan persegi untuk avatar bulat
 │  │  └─ Sertifikat/             ← file sertifikat asli
 │  │     └─ thumbs/              ← thumbnail ringan untuk galeri
 │  ├─ SIMONEV-SIKEP/             ← checkout proyek magang (tidak dipublikasikan)
@@ -50,8 +52,9 @@ profile: {
   semesterLabel: "Semester 7",
   location: "Yogyakarta, Indonesia",
 
-  photo: "assets/img/Profile.jpg",    // "" = pakai huruf awal saja
+  photo: "assets/img/Profile-cutout.png",  // "" = pakai huruf awal saja
   photoAlt: "Portrait of Syalsa Muenwa Jadeita",
+  avatarPhoto: "assets/img/Profile-avatar.png", // potongan persegi untuk avatar
 
   email: "syalsamuenwa089@gmail.com",
   phone: "+62 812-7680-3135",         // tampilan di halaman
@@ -64,11 +67,16 @@ profile: {
 ```
 
 Foto dipakai dua kali: sebagai cover di kartu profil dan sebagai avatar bulat.
-Kalau file foto dihapus atau path-nya salah, website otomatis menampilkan
-huruf awal nama.
+Untuk cover dipakai `Profile-cutout.png` — latar foto sudah dihapus sehingga
+wajah menyatu dengan gradasi pink di belakangnya, tanpa kotak abu-abu. Untuk
+avatar bulat dipakai `Profile-avatar.png`, potongan persegi dari foto yang sama.
+
+Kalau salah satu file dihapus atau path-nya salah, website otomatis menampilkan
+huruf awal nama. `Profile.jpg` tetap disimpan karena dipakai sebagai gambar
+preview saat tautan dibagikan (meta OG).
 
 Nama file foto **case-sensitive** di GitHub Pages (server Linux). Simpan sebagai
-`Profile.jpg` dengan P kapital, sama seperti di `content.js`.
+`Profile-cutout.png` dan `Profile-avatar.png`, sama seperti di `content.js`.
 
 ## 2. Menambah atau mengubah proyek
 

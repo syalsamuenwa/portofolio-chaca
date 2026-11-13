@@ -121,7 +121,7 @@
       avatarPhoto.addEventListener("error", function () {
         avatarPhoto.hidden = true;
       });
-      avatarPhoto.src = profile.photo;
+      avatarPhoto.src = profile.avatarPhoto || profile.photo;
     }
   }
 

@@ -499,21 +499,44 @@ button {
   display: grid;
   place-items: center;
   aspect-ratio: 4 / 5;
-  max-height: 430px;
-  background: linear-gradient(150deg, var(--sand) 0%, var(--accent-soft) 55%, var(--accent) 100%);
+  max-height: 480px;
+  background:
+    radial-gradient(72% 52% at 50% 4%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 62%),
+    radial-gradient(120% 92% at 50% 112%, rgba(167, 73, 100, 0.46), rgba(167, 73, 100, 0) 60%),
+    linear-gradient(165deg, var(--sand) 0%, var(--sand-strong) 36%, var(--accent-soft) 70%, var(--accent) 100%);
   overflow: hidden;
+  isolation: isolate;
 }
 
 .profile-card__photo {
   position: absolute;
   inset: 0;
+  z-index: 1;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center 18%;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+/* Fade the portrait into the white card body so there is no hard photo edge. */
+.profile-card__cover::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 24%;
+  z-index: 2;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 55%,
+    var(--surface) 100%
+  );
+  pointer-events: none;
 }
 
 .profile-card__initials {
+  position: relative;
+  z-index: 1;
   font-family: var(--font-display);
   font-size: 4rem;
   color: rgba(255, 250, 251, 0.92);
@@ -521,6 +544,7 @@ button {
 
 .profile-card__badge {
   position: absolute;
+  z-index: 3;
   top: 14px;
   right: 14px;
   font-size: 0.66rem;
@@ -551,7 +575,9 @@ button {
   margin-top: -45px;
   border: 3px solid var(--surface);
   border-radius: 50%;
-  background: linear-gradient(150deg, var(--accent-soft), var(--accent-strong));
+  background:
+    radial-gradient(88% 88% at 50% 10%, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0) 68%),
+    linear-gradient(160deg, var(--sand) 0%, var(--accent-soft) 58%, var(--accent) 100%);
   color: #fffafb;
   font-family: var(--font-display);
   font-size: 1.9rem;
@@ -564,7 +590,7 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 18%;
+  object-position: center;
 }
 
 .profile-card__name {
